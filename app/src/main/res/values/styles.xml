@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CourseTitle">course_title</style>
+
+    <style name="NoteTitle" parent="@style/TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/pluralsightPlum</item>
+    </style>
+
+    <style name="BrandedText" parent="@style/TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/pluralSightOrange</item>
+    </style>
+
+    <style name="CourseName" parent="BrandedText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ModuleName" parent="BrandedText">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AddFAB" parent="@style/Widget.Design.FloatingActionButton">
+        <item name="android:layout_margin">@dimen/fab_margin</item>
+        <item name="srcCompat">@drawable/ic_baseline_add_24</item>
+    </style>
+
+    <style name="RedGreenEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@android:color/holo_green_dark</item>
+        <item name="android:textColorHint">@android:color/holo_red_dark</item>
+    </style>
+</resources>
