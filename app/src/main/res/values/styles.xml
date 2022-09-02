@@ -28,4 +28,9 @@
         <item name="android:textColor">@android:color/holo_green_dark</item>
         <item name="android:textColorHint">@android:color/holo_red_dark</item>
     </style>
+
+    <style name="Widget.Theme.NoteKeeper.NoActionBar.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+
+    </style>
 </resources>

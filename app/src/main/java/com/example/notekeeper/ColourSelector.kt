@@ -22,7 +22,7 @@ class   ColourSelector @JvmOverloads
                 Color.parseColor(it.toString())
             }
         typedArray.recycle()
-        orientation = LinearLayout.HORIZONTAL
+        orientation = HORIZONTAL
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)
                   as LayoutInflater
         inflater.inflate(R.layout.colour_selector, this)

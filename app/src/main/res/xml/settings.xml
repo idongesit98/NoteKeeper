@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General">
+
+        <Preference
+            android:selectable="true"
+            android:summary="Edit account settings"
+            android:title="Account Settings"
+            android:key="key_account_settings"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Data">
+        <EditTextPreference
+            android:defaultValue="My Notes"
+            android:key="key_gallery_name"
+            android:summary="My Notes"
+            android:title="Default Storage"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="key_upload_over_wifi"
+            android:summary="Upload the notes when wifi is available"
+            android:title="Auto upload"/>
+
+        <ListPreference
+            android:defaultValue="1"
+            android:dialogTitle="Data Backup Frequency"
+            android:entries="@array/pref_backup_frequency_entries"
+            android:entryValues="@array/pref_backup_frequency_values"
+            android:key="key_backup_frequency"
+            android:summary="If wifi is not available, how often do you want to back..."
+            android:title="Data Backup Frequency"/>
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

@@ -1,12 +1,11 @@
 package com.example.notekeeper.ui.course
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.notekeeper.R
 import com.example.notekeeper.databinding.FragmentCoursesBinding
 
 
@@ -41,4 +40,16 @@ class CourseFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_main, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+            R.id.action_setting ->{
+            }
+        }
+        return true
+    }
+
 }

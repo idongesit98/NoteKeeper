@@ -28,9 +28,9 @@ class NotesFragment : Fragment() {
         _binding = FragmentNotesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotes
+        //val textView: TextView = binding.textNotes
         galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+           // textView.text = it
         }
         return root
     }

@@ -9,7 +9,9 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.notekeeper.ui.course.CourseFragment
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.fragment_courses.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         notePosition = savedInstanceState?.getInt(NOTE_POSITION, POSITION_NOT_SET) ?:
             intent.getIntExtra(NOTE_POSITION, POSITION_NOT_SET)
 
+
        if (notePosition != POSITION_NOT_SET )
             displayNote()
 
@@ -45,6 +48,9 @@ class MainActivity : AppCompatActivity() {
             DataManager.notes.add(NoteInfo())
            notePosition = DataManager.notes.lastIndex
        }
+      colorSelector.addListener{
+          noteColor = it
+      }
 
     }
 
@@ -57,6 +63,7 @@ class MainActivity : AppCompatActivity() {
       val note = DataManager.notes[notePosition]
         textNoteText.setText(note.text)
         textNoteTitle.setText(note.text)
+        colorSelector.selectedColorValue = note.color
         noteColor = note.color
 
         val coursePosition = DataManager.courses.values.indexOf(note.course )
